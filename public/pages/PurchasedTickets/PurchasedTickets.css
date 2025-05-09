@@ -1,0 +1,393 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header.head1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color:  rgba(244, 244, 244, 0.73);
+    color: white;
+    z-index: 10;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #fffefe;
+    margin: 20px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Ticket Wrapper */
+.ticket-wrap {
+    display: flex;
+    align-items: flex-start;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ticket-wrap:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Ticket Image */
+.Purchasedticket-image img {
+    max-width: 140px;
+    height: auto;
+    border-radius: 10px;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+/* Ticket Details */
+.ticket-details {
+    flex-grow: 1;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Ticket Title */
+.ticket-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #03bd00;
+    font-family: 'Montserrat', sans-serif;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Ticket Info Section */
+.ticket-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    font-size: 1.1rem;
+    color: #444;
+    font-weight: bold;
+}
+
+.ticket-info p {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.ticket-info i {
+    margin-right: 8px;
+    color: #3498db;
+}
+
+.ticket-info .info-title {
+    font-weight: bold;
+    color: #2980b9;
+    font-family: 'Montserrat', sans-serif;
+    margin-right: 5px;
+}
+
+/* Ticket Price Box */
+.ticket-price-box {
+    display: inline-block;
+    padding: 4px 8px;
+    background-color: #2ecc71;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    text-transform: uppercase;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-left: 10px;
+    align-self: center;
+}
+
+/* Ticket Header */
+header.Phead {
+    background: #791c1c;
+    padding: 40px 0;
+    text-align: center;
+    color: #fff;
+    border-bottom: 5px solid #006d7f;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 10%;
+}
+
+header.Phead h1 {
+    margin: 0;
+    font-size: 2.8rem;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+header.Phead p {
+    margin: 10px 0 0;
+    font-size: 1.2rem;
+    font-weight: 400;
+    opacity: 0.9;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Ticket Container */
+main.PTcontainer {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#purchasedTickets {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+/* Filter Menu */
+.filter-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+.filter-container label {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.filter-container select {
+    padding: 8px 16px;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+/* General Utility Classes */
+.hidden {
+    display: none;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.flex-center {
+    justify-content: center;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+.text-blue {
+    color: #3498db;
+}
+
+.text-red {
+    color: #07fa40;
+}
+#custom-dropdown-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 250px; /* Control the width of the custom dropdown */
+    position: relative; /* Make sure the dropdown is positioned relative to this container */
+}
+
+#custom-dropdown {
+    position: relative;
+    display: inline-block;
+    width: 200px;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    color: #333;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+#custom-dropdown:hover {
+    background-color: #e0e0e0;
+    box-shadow: 0 4px 6px rgba(0, 123, 255, 0.2); /* Hover effect */
+}
+
+#selected-option {
+    padding-right: 30px; /* Space for the arrow */
+}
+
+#options-container {
+    display: none;  /* Initially hidden */
+    flex-direction: column;
+    gap: 5px;  /* Space between options */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    position: absolute;
+    top: 100%;  /* Position below the dropdown */
+    left: 0;
+    padding: 10px 0;  /* Padding around options */
+    z-index: 9999; /* Ensure it appears above other content */
+    opacity: 0;
+    pointer-events: none; /* Prevent interaction when hidden */
+    transition: opacity 0.3s ease, visibility 0s linear 0.3s; /* Smooth fade-in/out */
+}
+
+/* Show the dropdown when 'open' class is added */
+#options-container.open {
+    display: flex;
+    opacity: 1;
+    pointer-events: auto; /* Enable interaction when shown */
+    visibility: visible;
+    transition: opacity 0.3s ease; /* Instant visibility toggle */
+}
+
+/* Styling for each option */
+.option {
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 8px; /* Option rounding */
+}
+
+.option:hover {
+    background-color: #d0d0d0;
+}
+
+#custom-dropdown::after {
+    content: '';
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 5px solid transparent;
+    border-top-color: #333;
+}
+
+#custom-dropdown.open::after {
+    transform: translateY(-50%) rotate(180deg); /* Flip the arrow on open */
+}
+
+#filter-text {
+    margin-left: 20px;  /* Add space between the dropdown and text */
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Modal Background */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);  /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;  /* Ensure it's above other content */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;  /* Adjust the width as needed */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Modal Title */
+.modal-content h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Modal Text */
+.modal-content p {
+    margin-bottom: 10px;
+}
+
+/* Input Fields */
+.modal-content input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Buttons */
+.modal-content button {
+    padding: 10px;
+    width: 100%;
+    margin-top: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.modal-content button:hover {
+    background-color: #0056b3;
+}
+
+/* Close Button */
+#cancel-close {
+    background-color: #dc3545;
+    margin-top: 10px;
+}
+
+#cancel-close:hover {
+    background-color: #c82333;
+}
+
+/* Cancel Button Style */
+.cancel-button {
+    background-color: #d9534f; /* Red background for cancel */
+    color: #fff; /* White text */
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cancel-button:hover {
+    background-color: #c9302c; /* Darker red on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+.cancel-button:active {
+    background-color: #ac2925; /* Even darker red when clicked */
+    transform: scale(0.98); /* Slight shrink effect on click */
+}
+
+.cancel-button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.5); /* Focus effect */
+}
+

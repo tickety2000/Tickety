@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purchased Tickets</title>
+    <link rel="stylesheet" href="pages/PurchasedTickets/PurchasedTickets.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header class="head1">
+        <div class="line2">
+            <div>
+                <span class ="Time">SUN-THU 10 AM to 6 PM</span>
+                <a href="/contactUs" class="contactUs">Contact Us</a>
+            </div>
+        </div>
+    
+        <nav class="nav">
+            <div class="navCountent">
+                <div class="nav-left">
+                    <a href="/"> <img src="/images/Weblogo.png" class="logo" alt="logo"> </a>
+                </div>
+    
+                <div class="nav-center">
+                    <div class="search-container">
+                        <input 
+                            id="search-bar" 
+                            class="search-input" 
+                            type="text" 
+                            placeholder="Search tickets by name, description, or location..." 
+                            aria-label="Search tickets"
+                        />
+                        <div id="search-results" class="search-results"></div>
+                    </div>
+                </div>
+    
+                <div class="nav-right">
+                    <button class="cart-btn">
+                        <img src="\images\BoughtTickets.png" alt="Cart Icon" class="cart-img" id="PurchasedTickets">
+                    </button>
+                    <div id="username-display" class="username-display">
+                        <img id="user-img" src="https://i.ibb.co/Phmq0Lk/none-user.png" alt="user">
+                        <p id="user-name"></p>
+                    </div>
+                    <div class="dropdown-user" id="user-dropdown"></div>
+                    <a href="/login" class="btn btn-primary logo-none ButtonLogin" role="button"><samp class="spaam">Login</samp></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <header class="Phead">
+        <div class="container">
+            <div class="header-content">
+                <h1 class="header-title">Your Purchased Tickets</h1>
+                <p class="header-subtitle">Review your tickets and manage your bookings effortlessly</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="PTcontainer">
+        <div id="filter-container">
+            <span>Filter Category:</span>
+            <div id="custom-dropdown" class="custom-dropdown">
+                <div id="selected-option">Select Category</div>
+                <div id="options-container" class="options-container">
+                    <div class="option">All</div>
+                    <div class="option">Cinema</div>
+                    <div class="option">Train</div>
+                    <div class="option">Bus</div>
+                    <div class="option">Plane</div>
+                    <div class="option">Football</div>
+                </div>
+            </div>
+        </div>
+        
+        <section id="purchasedTickets" aria-label="Purchased Tickets"></section>
+    </main>
+
+    <script src="js/script.js"></script>
+    <script src="/pages/PurchasedTickets/PurchasedTickets.js"></script>
+
+</body>
+</html>

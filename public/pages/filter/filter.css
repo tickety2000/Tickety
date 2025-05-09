@@ -1,0 +1,372 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+
+.main-container {
+    display: flex;
+    margin: 30px;
+    flex: 1;
+}
+
+.breadcrumb {
+    font-size: 14px;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.breadcrumb a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    font-size: 26px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
+}
+
+.filter-section {
+    margin-top: 20px;
+}
+
+
+
+#priceSlider {
+    margin-top: 15px;
+}
+
+
+.price-values {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #333;
+    margin-top: 10px;
+}
+
+label {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    color: #333;
+}
+
+input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+.manual-inputs {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+input[type="text"] {
+    width: 45%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    margin-top: 10px;
+    background-color: #f9f9f9;
+}
+
+/* Styles for hiding the Start Location and Destination dropdowns */
+.hide-start-destination #startLocationDropdown,
+.hide-start-destination #destinationDropdown,
+.hide-start-destination .filter-section:nth-child(4), /* Hide the entire section */
+.hide-start-destination .filter-section:nth-child(5) { /* Hide the entire section */
+    display: none !important; /* Ensure they are hidden */
+}
+
+
+
+/* Styles for the Date Filter (Title on top) */
+.date-filter {
+    display: flex;
+    flex-direction: column; /* Stack label above input */
+    margin-top: 20px;
+}
+
+
+
+/* Adjust the category title to start at the same position as the tickets */
+#namePage_2 {
+    font-size:27px; /* Smaller font size */
+    font-weight: bold;
+    color: #333;
+    margin: 5px 0 50px 0px; 
+    text-align: left; 
+}
+
+
+/* Ticket container adjustments */
+.ticket-container {
+    width: 100%;
+ padding-left: 80px;
+    text-decoration: none;
+   
+}
+
+.tickets-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 35px;
+    justify-content: flex-start;   
+    text-decoration: none; 
+   
+}
+
+/* Default for most categories: 3 tickets per row */
+.ticket {
+    position: relative;
+    background-color: #ffffff;
+    width: calc(28% - 6.5%); /* 3 tickets per row */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+    height: auto; /* Allow height to adjust based on content */
+    display: flex;
+    flex-direction: row; /* Stack the image, title, and description vertically */
+    justify-content: space-between;
+    text-decoration: none;
+    border-bottom-right-radius:0px ;
+    border-bottom-left-radius: 0px;
+}
+
+/* Special handling for bus, train, and plane categories (1 ticket per row) */
+.ticket.bus, .ticket.train, .ticket.plane ,.ticket.concert {
+    width: calc(30% - 5%); /* 2 tickets per row */
+    text-decoration: none;
+}
+
+.ticket.bus img, .ticket.train img, .ticket.plane img ,.ticket.concert img img {
+    width: 100%; /* 1 ticket per row */
+    height: 200px;
+    object-fit: fill; /* Ensure the image is contained within its bounds */
+    text-decoration: none;
+}
+
+.ticket:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    transform: translateY(-10px) scale(1.01);
+}
+
+.ticket img {
+    width: 100%; /* Ensure the image takes up the full width of the container */
+    height: 300px; /* Allow the height to adjust based on the aspect ratio */
+}
+
+.ticket .ticket-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.ticket h3, .ticket p {
+    margin-left: 10px;
+    margin-top: 15px;
+    font-size: 1.2em;
+    color: #333;
+    text-decoration: none;
+}
+
+.ticket p {
+    font-size: 1em;
+    color: #666;
+    line-height: 1.5;
+    text-decoration: none;
+}
+
+.ticket a {
+    width: 100%;
+    text-decoration: none;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.ticket a:hover {
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .ticket {
+        width: 100%; /* 1 ticket per row for bus/train/plane */
+    }
+}
+
+@media (max-width: 480px) {
+    .ticket {
+        width: 100%; /* 1 item per row for bus/train/plane */
+    }
+}
+
+.body-filter {
+    top: 130px;
+/* Filter Sidebar */
+}
+
+
+
+.filter-sidebar {
+    width: 30%; 
+    height: 100%;
+    padding: 25px; 
+    background-color: #aa7e7e25;
+    z-index: 10;
+    border-radius: 15px; /* Smooth, modern corners */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Subtle shadow for a classier look */
+}
+
+.filter-sidebar::-webkit-scrollbar {
+    display: none; /* Hides scrollbar */
+}
+
+/* Filter Header */
+.filter-header {
+    font-size: 18px;
+    font-weight: bold;
+    color: #222; /* Rich dark color for text */
+    margin-bottom: 10px;
+    border-bottom: 2px solid #006d7f; /* Modern accent under header */
+    padding-bottom: 5px;
+    letter-spacing: 0.5px; /* Slight letter spacing for elegance */
+}
+
+/* Clear Button */
+.clear-button {
+    background-color: #006d7f; /* Deep red for a bold button */
+    color: #fff; /* Light text for contrast */
+    border: none;
+    padding: 10px 20px; /* Slightly larger padding for better touch targets */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.clear-button:hover {
+    background-color: #aa7e7e; /* Lighter red for hover effect */
+    transform: scale(1.05); /* Subtle scaling for interactivity */
+}
+
+/* Filter Categories */
+.filter-category {
+    margin-bottom: 25px;
+}
+
+.filter-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #222;
+    margin-top: 15px;
+    border-left: 4px solid #006d7f; /* Elegant accent bar */
+    padding-left: 10px;
+}
+
+/* Input Fields */
+input[type="text"], select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #aa7e7e68; /* Soft border for elegance */
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: rgba(244, 244, 244, 0.73); /* Matches the sidebar's aesthetic */
+    color: #222;
+    text-align: center;
+}
+
+input[type="text"]:focus, select:focus {
+    outline: none;
+    border-color:#006d7f; /* Modern focus style */
+    background-color: #fff; /* Highlight input field */
+    box-shadow: 0 0 5px rgba(121, 28, 28, 0.5); /* Subtle glow on focus */
+}
+
+/* Price Slider */
+.noUi-target {
+    height: 8px;
+    background: #aa7e7e68;
+    border-radius: 4px;
+}
+
+.noUi-handle {
+    background: #006d7f;
+    border: 2px solid #fff;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.noUi-handle:hover {
+    background: #aa7e7e;
+}
+
+/* Date Filter */
+.date-filter label {
+    font-size: 14px;
+    color: #222;
+    margin-bottom: 5px; 
+}
+
+.date-filter input[type="date"] {
+    padding: 10px;
+    border: 1px solid #aa7e7e68;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: rgba(244, 244, 244, 0.73);
+    color: #222;
+}
+
+/* Scrollbar (Modern Hidden Style) */
+.filter-sidebar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.filter-sidebar::-webkit-scrollbar-thumb {
+    background: #006d7f;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+}
+
+.filter-sidebar::-webkit-scrollbar-thumb:hover {
+    background: #aa7e7e;
+}
+
+.filter-sidebar::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+/* Hover Effects */
+input:hover, select:hover {
+    border-color: #006d7f; /* Adds slight interactivity on hover */
+    background-color: rgba(255, 255, 255, 0.9); /* Brighter background on hover */
+}

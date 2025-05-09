@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en" class="ticket-detail-page">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Details</title>
+    <link rel="stylesheet" href="pages/seat/ticket_detail.css"> <!-- External CSS file -->
+    <link rel="stylesheet" href="pages/seat/seat.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/all.css">
+</head>
+<body>
+    <header class="head1">
+        <div class="line2">
+            <div>
+                <span class="Time">SUN-THU 10 AM to 6 PM</span>
+                <a href="/contactUs" class="contactUs">Contact Us</a>
+            </div>
+        </div>
+
+        <nav class="nav">
+            <div class="navCountent">
+                <div class="nav-left">
+                    <a href="/"> <img src="/images/Weblogo.png" class="logo" alt="logo"> </a>
+                </div>
+    
+                <div class="nav-center">
+                    <div class="search-container">
+                        <input 
+                            id="search-bar" 
+                            class="search-input" 
+                            type="text" 
+                            placeholder="Search tickets by name, description, or location..." 
+                            aria-label="Search tickets"
+                        />
+                        <div id="search-results" class="search-results"></div>
+                    </div>
+                </div>
+    
+                <div class="nav-right">
+                    <button class="cart-btn">
+                        <img src="\images\BoughtTickets.png" alt="Cart Icon" class="cart-img" id="PurchasedTickets">
+                    </button>
+                    <div id="username-display" class="username-display">
+                        <img id="user-img" src="https://i.ibb.co/Phmq0Lk/none-user.png" alt="user">
+                        <p id="user-name"></p>
+                    </div>
+                    <div class="dropdown-user" id="user-dropdown"></div>
+                    <a href="/login" class="btn btn-primary logo-none ButtonLogin" role="button"><samp class="spaam">Login</samp></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="ticket-detail-container">        
+        <!-- Regular Ticket Details (outside the modal) -->
+        <div id="ticket-detail" class="ticket-detail-wrapper">
+            <!-- Ticket details like image and descriptions will be here -->
+        </div>
+
+        <!-- Button will be conditionally rendered by JS for cinema category -->
+        <button id="pick-seats-btn" style="display:none;">Pick Your Seats</button>
+
+        <!-- Modal for Seat Picker -->
+        <div id="ticket-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" id="close-modal-btn">&times;</span>
+                
+                <!-- Seat Picker (Content inside the modal) -->
+                <h1>Pick Your Seat</h1>
+                
+                <div id="booking-container" style="display: none;">
+                    <label for="seat-class">Select Seat Class:</label>
+                    <select id="seat-class">
+                        <option value="First Class">First Class</option>
+                        <option value="Second Class">Second Class</option>
+                        <option value="Third Class">Third Class</option>
+                    </select>
+                </div>
+
+                <br><br><br>
+
+                <section id="cinemaSeats">
+                    <!-- Cinema Screen or Seat Layout goes here -->
+                    <p>Seat Picker content will be here</p>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <br><br>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section about">
+                <h3>About Us</h3>
+                <p>We offer a variety of entertainment and travel options, including concerts, cinema, sports, and more. Your gateway to unforgettable experiences!</p>
+            </div>
+            
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/profile">Profile</a></li>
+                    <li><a href="/PurchasedTickets">Purchased Tickets</a></li>
+                    <li><a href="/concert">Concert</a></li>
+                    <li><a href="/cinema">Cinema</a></li>
+                    <li><a href="/bus">Bus</a></li>
+                    <li><a href="/football">Football</a></li>
+                    <li><a href="/plane">Plane</a></li>
+                    <li><a href="/train">Train</a></li>
+                    <li><a href="/contactUs">Contact Us</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section social">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/omar.atwa.37051?mibextid=ZbWKwL" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.tiktok.com/@2xdanger2" class="social-icon" target="_blank"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://www.instagram.com/omar_atwa03/profilecard/?igsh=a3g0c2Vodm1oMTd3" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/andrew-wageh-4a8688245" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 Tickety. All Rights Reserved. Designed by Tickety.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"> </script>
+    <script src="pages/seat/seat.js"></script>
+
+    <script>
+        // Get elements
+        const pickSeatsBtn = document.getElementById('pick-seats-btn');
+        const modal = document.getElementById('ticket-modal');
+        const closeModalBtn = document.getElementById('close-modal-btn');
+
+        // Check if the category is 'cinema' and show the button if true
+        const category = new URLSearchParams(window.location.search).get('category');
+        if (category === 'cinema') {
+            pickSeatsBtn.style.display = 'inline-block'; // Show button if category is cinema
+        }
+
+        // Show modal when the button is clicked
+        pickSeatsBtn.onclick = function() {
+            modal.style.display = "block";
+        };
+
+        // Close modal when the close button is clicked
+        closeModalBtn.onclick = function() {
+            modal.style.display = "none";
+        };
+
+        // Close modal if user clicks outside the modal content
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        };
+    </script>
+
+</body>
+</html>

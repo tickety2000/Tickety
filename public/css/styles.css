@@ -1,0 +1,628 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+.nav {
+  width: 100%;
+  padding: 10px 20px;
+  background-color: rgba(244, 244, 244, 0.73);
+}
+
+.main-sections {
+  background-color: inherit;
+}
+
+.navCountent {
+  width: 95%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.logo {
+  margin-left: 70px;
+  width: 190px;
+  height: 45px;
+  margin-right: 10px;
+}
+
+.navbar-right a {
+  margin-left: 15px;
+  text-decoration: none;
+}
+
+.line2 {
+  width: 100%;
+  background-color: #222;
+}
+
+.line2 div {
+  height: 36px;
+  padding: 0 20px;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Time {
+  display: inline-block;
+  font-size: 12px;
+  color: rgb(255, 255, 255);
+}
+
+.contactUs {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 12px;
+  color: rgb(255, 255, 255);
+}
+
+.items {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item {
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+}
+
+.item img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.item p {
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.navbar-brand {
+  font-size: 20px;
+  font-weight: bold;
+  margin-right: 20px;
+  text-decoration: none;
+  color: #333;
+}
+
+.dropdown-btn {
+  background: none;
+  border: none;
+  font-size: 16px;
+  color: #555;
+  cursor: pointer;
+}
+
+.cart-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  outline: none;
+  cursor: pointer;
+}
+
+.cart-img {
+  width: 49px;
+  height: 42px;
+  margin-right: 15px;
+  display: block;
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.section-Categories {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.section-Category {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 15px;
+  position: relative;
+  text-align: center;
+  align-items: center;
+}
+
+.section-Categories-header2 {
+  font-weight: bolder;
+  font-size: 25px;
+  color: #333;
+}
+
+/* Username display styling */
+.username-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+#user-img {
+  margin-top: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+#user-name {
+  margin: 0;
+  font-size: 18px;
+  color: #000000;
+  text-align: center;
+}
+
+/* Dropdown styling */
+.dropdown-user {
+  display: none;
+  position: absolute;
+  top: 85px;
+  right: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  z-index: 1000;
+  padding: 10px;
+  min-width: 120px;
+  text-align: left;
+}
+
+a.btn.btn-primary {
+  font-size: 17px;
+  width: 90px;
+  height: 40px;
+  margin: 20px 0;
+  background-color: #e00c24;
+  border-color: #e00c24;
+}
+
+a.btn.btn-primary:hover {
+  background-color: darkred;
+  border-color: darkred;
+}
+
+.dropdown-user.show {
+  display: block;
+}
+
+.dropdown-user a {
+  display: block;
+  padding: 8px 12px;
+  color: #333;
+  text-decoration: none;
+}
+
+.dropdown-user a:hover {
+  background-color: #f0f0f0;
+}
+
+
+.search-input {
+  margin-left: 50px;
+  width: 800px;
+  padding: 10px;
+  border-radius: 18px;
+  border: 3px solid rgba(131, 5, 5, 0.818);
+  margin-right: 160px;
+}
+
+/* styles.css */
+.search-container {
+  position: relative;
+}
+
+
+/* Style for the search results container */
+#search-results {
+  display: flex; 
+  position: absolute;
+  top: 50px; 
+  left: 0;
+  width: 100%;
+  max-height: 400px; 
+  overflow-y: auto; 
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000; 
+  border-radius: 19px;
+  border: 1px solid rgb(255, 253, 253);
+  display: none;
+}
+
+
+/* Style for individual search result items */
+.search-result-item {
+  display: flex;
+  align-items: center; /* Align items horizontally centered */
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+  gap: 15px; /* Space between image and text */
+}
+
+#search-results::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
+
+/* Style for the ticket image */
+.ticket-image {
+  width: 60px; /* Image size */
+  height: 60px;
+  object-fit: cover; /* Ensure the image is contained within its bounds */
+  border-radius: 5px; /* Optional: rounded corners for the image */
+}
+
+/* Style for ticket name and description */
+.ticket-details {
+  display: flex;
+  flex-direction: column; /* Stack name and description vertically */
+  justify-content: center;
+}
+
+/* Bold style for the ticket name */
+.ticket-details strong {
+  font-size: 16px; /* Increase font size for the name */
+  font-weight: bold;
+}
+
+
+.ticket-details p {
+  font-size: 14px; 
+  color: #555;
+  margin-top: 5px; 
+}
+
+
+.search-result-link {
+  text-decoration: none;
+  color: inherit; 
+}
+
+.search-result-linka:focus, a:active {
+  outline: none;
+  border: none;
+}
+
+
+.search-result-link:hover {
+  color: #007bff; 
+}
+
+
+.search-result-item a {
+  text-decoration: none; 
+  color: inherit; 
+}
+
+.line {
+  opacity: 20%;
+  width: 100%;
+  height: 0.5px;
+  background-color: #1da2d6ce;
+}
+/* Vertical menu styling */
+.vertical-menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f9fa;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 0; /* Remove extra padding */
+  margin-top: 10px;
+  width: 100%;
+  height: 60px;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  transition: transform 0.3s ease-in-out;
+}
+
+.vertical-menu .menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Ensure the menu items fill the vertical menu's height */
+}
+
+.vertical-menu .menu-item {
+  font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
+  display: inline-block;
+  padding: 0 20px; /* Horizontal spacing only */
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500; /* Bold weight */
+  text-align: center;
+  color: #000;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  height: 100%; /* Match the height of the vertical menu */
+  line-height: 60px; /* Vertically center the text */
+  border-left: 1px solid #ddd; /* Add gray divider between items */
+}
+
+/* Remove border from the first item */
+.vertical-menu .menu-item:first-child {
+  border-left: none;
+}
+
+/* Hover and active states */
+.vertical-menu .menu-item:hover {
+  background-color: #e0f7fa;
+  color: #006d7f;
+  transform: scale(1.05);
+}
+
+.vertical-menu .menu-item.active {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Style for "All Categories" */
+.vertical-menu .menu-item.all-categories {
+  color: #fff;
+  font-weight: 700; /* Bold weight */
+  background-color: #9a1515;
+  height: 100%; /* Fill the vertical menu height */
+}
+
+.vertical-menu .menu-item.all-categories:hover {
+  background-color: darkred;
+}
+
+/* Last menu item doesn't need a border */
+.vertical-menu .menu-item:last-child {
+  border-right: none; /* Remove the right border for the last item */
+}
+
+
+
+/* Carousel Container */
+.menu-carousel-container {
+  display: flex;
+  flex-direction: column; /* Stack vertical menu and carousel */
+  align-items: center;
+  gap: 0; /* Remove spacing between menu and carousel */
+  width: 100%;
+  margin: 0 auto; /* Center the entire container */
+}
+
+/* Carousel */
+.carousel {
+  width: 100%; /* Full width for responsiveness */
+  margin-top: -78px; /* Remove margin so it aligns perfectly with the menu */
+  position: relative; /* Proper layering */
+  overflow: hidden; /* Hide overflowing content */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for elegance */
+  z-index: 1; /* Ensure it sits above the footer */
+}
+
+/* Carousel Inner */
+.carousel-inner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Carousel Item */
+.carousel-item {
+  height: 500px; /* Prominent height for the carousel */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Carousel Image */
+.HotOffersImg {
+  width: 100%; /* Fully responsive width */
+  height: 100%; /* Fully responsive height */
+  object-fit: fill; /* Crop and scale to fill */
+}
+
+/* Carousel Indicators */
+.carousel-indicators {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.carousel-indicators button {
+  width: 16px;
+  height: 16px;
+  background-color: rgba(255, 255, 255, 0.9); /* White with slight transparency */
+  border: 2px solid #007bff; /* Blue border for visibility */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.carousel-indicators button.active,
+.carousel-indicators button:hover {
+  background-color: #007bff; /* Highlighted blue */
+  transform: scale(1.2); /* Subtle scaling effect */
+}
+
+/* Carousel Control Arrows */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color:#006d7f; /* Dark translucent background */
+  border-radius: 50%; /* Fully circular background */
+  width: 100px; /* Increased size for bigger circle */
+  height: 100px; /* Increased size for bigger circle */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid rgba(84, 231, 221, 0.5); /* Subtle border for contrast */
+}
+
+.carousel-control-prev-icon::after {
+  transform: rotate(135deg); /* Left arrow */
+}
+
+.carousel-control-next-icon::after {
+  transform: rotate(-45deg); /* Right arrow */
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+  background-color:  rgba(13, 206, 227, 0.8); /* Darker effect on hover */
+  border-color:  rgba(13, 206, 227, 0.8); /* Brighten the border on hover */
+}
+
+
+
+#body {
+  font-family: Arial, sans-serif;
+  background-color: #aa7e7e68;
+  overflow-x: hidden;
+}
+
+.main-sections {
+  background-color: inherit;
+}
+
+
+
+.nav-left, .nav-center, .nav-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-center {
+  width: 70%;
+}
+
+.nav-right {
+  margin-right: 100px;
+  gap: 20px;
+}
+
+/* Style the logo button */
+.logo-none {
+  display: block; /* This ensures the button is visible by default */
+  margin-left: 70px;
+  width: 190px;
+  height: 45px;
+  margin-right: 10px;
+  text-align: center;
+}
+
+/* Profile and username display container */
+.username-display {
+  display: none;  /* Hide profile by default */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative; /* To position the dropdown relative to this */
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Adds space between the icon and name */
+}
+
+/* User profile icon styling */
+#user-img {
+  margin-top: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+/* User name styling */
+#user-name {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #000000;
+  text-align: center;
+  white-space: nowrap; /* Prevents the name from wrapping */
+}
+
+/* Dropdown menu container */
+#user-dropdown {
+  display: none; /* Hidden by default */
+  position: absolute; /* Position it relative to the parent container */
+  top: 100%; /* Position it just below the user icon */
+  left: -60px; /* Move dropdown further left */
+  background-color: #fff; /* Background color of the dropdown */
+  border: 1px solid #ccc; /* Border around the dropdown */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for dropdown */
+  z-index: 999; /* Ensure dropdown is on top */
+  width: 150px; /* Set the width as needed */
+  max-width: 100%; /* Prevent the dropdown from overflowing */
+}
+
+/* Show dropdown when toggled */
+#user-dropdown.show {
+  display: block;
+}
+
+/* Dropdown menu links styling */
+#user-dropdown a {
+  display: block; /* Make links take up full width */
+  padding: 10px;
+  color: #333;
+  text-decoration: none;
+  border-right: 1px solid #ddd; /* Add gray vertical line */
+}
+
+/* Remove the vertical line from the last item */
+#user-dropdown a:last-child {
+  border-right: none;
+}
+
+#user-dropdown a:hover {
+  background-color: #f1f1f1; /* Hover effect */
+}
+
+/* Profile icon size */
+.user-img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+/* Profile and username container hover effect */
+.username-display:hover {
+  color: #007bff;
+  cursor: pointer; /* Make the entire block clickable */
+}
+
+/* Prevent horizontal scroll on body */
+body {
+  overflow-x: hidden; /* Prevent any overflow */
+}
+
+
+/* Footer alignment fix */
+footer {
+  margin-top: 20px;
+  position: relative; /* Ensure it stays at the bottom of the page */
+  width: 100%;
+  background-color: #222; /* Dark footer background */
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  z-index: 0; /* Ensure it sits below the carousel */
+}

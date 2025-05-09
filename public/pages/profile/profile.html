@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="pages\profile\profile.css">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+<body>
+    <header class="head1">
+        <div class="line2">
+          <div>
+            <span class="Time">SUN-THU 10 AM to 6 PM</span>
+            <a href="/contactUs" class="contactUs">Contact Us</a>
+          </div>
+        </div>
+        <nav class="nav">
+          <div class="navCountent">
+            <div class="nav-left">
+              <a href="/"> <img src="/images/Weblogo.png" class="logo" alt="logo"> </a>
+            </div>
+          </div>
+        </nav>
+      </header>
+    
+    <div class="profile-container">
+        <!-- Sidebar -->
+        <div class="profile-sidebar">
+            <nav>
+                <ul>
+                    <li><a href="#" id="overviewBtn" class="menu-item">Overview</a></li>
+                    <li><a href="#" id="editProfileBtn" class="menu-item">Edit Profile</a></li>
+                    <li><a href="#" id="logoutBtn" class="menu-item">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Main Profile Section -->
+        <div class="profile-main">
+            <!-- Profile Overview -->
+            <div class="profile-card" id="profileOverview">
+                <div class="profile-header">
+                    <div class="profile-item">
+                        <strong>Name:</strong>
+                        <span id="userName">User Name</span>
+                    </div>
+                    <div class="profile-item">
+                        <strong>Email:</strong>
+                        <span id="userEmail">User@example.com</span>
+                    </div>
+                    <div class="profile-item">
+                        <strong>Phone:</strong>
+                        <span id="userPhone">User Phone</span>
+                    </div>
+                    <div class="profile-item">
+                        <strong>Age:</strong>
+                        <span id="userAge">User Age</span>
+                    </div>
+                    <div class="profile-item">
+                        <strong>Role:</strong>
+                        <span id="userRole">User Role</span>
+                    </div>
+                    <div class="profile-item">
+                        <strong>National ID:</strong>
+                        <span id="userNationalID">User National ID</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Edit Profile Form -->
+            <div class="profile-card profile-edit-form" id="profileEditForm">
+                <h3>Edit Profile</h3>
+                <input id="editName" class="edit-input" type="text" placeholder="Edit Name" />
+                <input id="editEmail" class="edit-input" type="email" placeholder="Edit Email" />
+                <input id="editPhone" class="edit-input" type="text" placeholder="Edit Phone" />
+                <input id="editAge" class="edit-input" type="text" placeholder="Edit Age" />
+                <select id="editRole" class="edit-input">
+                    <option value="student">Student</option>
+                    <option value="employed">Employed</option>
+                    <option value="unEmployed">UnEmployed</option>
+                </select>
+                <input id="editNationalID" class="edit-input" type="text" placeholder="Edit National ID" />
+                <button class="profile-edit-btn" id="saveChangesBtn">Save Changes</button>
+            </div>
+            
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+          <!-- About Section -->
+          <div class="footer-section about">
+            <h3>About Us</h3>
+            <p>We offer a variety of entertainment and travel options, including concerts, cinema, sports, and more. Your gateway to unforgettable experiences!</p>
+          </div>
+          
+          <!-- Quick Links Section -->
+          <div class="footer-section links">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="/" style="color: #00aaff;">Home</a></li>
+              <li><a href="/profile">Profile</a></li>
+              <li><a href="/PurchasedTickets">Purchased Tickets</a></li>
+              <li><a href="/concert">Concert</a></li>
+              <li><a href="/cinema">Cinema</a></li>
+              <li><a href="/bus">Bus</a></li>
+              <li><a href="/football">Football</a></li>
+              <li><a href="/plane">Plane</a></li>
+              <li><a href="/train">Train</a></li>
+              <li><a href="/contactUs">Contact Us</a></li>
+            </ul>
+          </div>
+          
+          <!-- Social Media Section -->
+          <div class="footer-section social">
+            <h3>Follow Us</h3>
+            <div class="social-links">
+              <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Footer Bottom Section -->
+        <div class="footer-bottom">
+          <p>&copy; 2024 Tickety. All Rights Reserved. Designed by Team Tickety.</p>
+        </div>
+      </footer>
+
+    <script src="pages\profile\profile.js"></script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Main Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/all.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body id="body">
+  <header class="head1">
+    <div class="line2">
+      <div>
+        <span class="Time">SUN-THU 10 AM to 6 PM</span>
+        <a href="/contactUs" class="contactUs">Contact Us</a>
+      </div>
+    </div>
+    <nav class="nav">
+      <div class="navCountent">
+        <div class="nav-left">
+          <a href="/"> <img src="/images/Weblogo.png" class="logo" alt="logo"> </a>
+        </div>
+        <div class="nav-center">
+          <div class="search-container">
+            <input id="search-bar" class="search-input" type="text" placeholder="Search tickets by name, description, or location..." aria-label="Search tickets" />
+            <div id="search-results" class="search-results"></div>
+          </div>
+        </div>
+        <div class="nav-right">
+          <button class="cart-btn">
+            <img src="/images/BoughtTickets.png" alt="Cart Icon" class="cart-img" id="PurchasedTickets">
+          </button>
+          <!-- Username Display with Profile Icon and Name -->
+          <div id="username-display" class="username-display">
+            <img src="https://i.ibb.co/Phmq0Lk/none-user.png" alt="user" class="user-img" id="user-img">
+            <p id="user-name">Username</p>
+            <!-- Dropdown container for profile and logout -->
+            <div class="dropdown">
+              <!-- The dropdown menu will be triggered by clicking on either the name or the icon -->
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="user-dropdown">
+                <li><a class="dropdown-item" href="/profile">Profile</a></li>
+                <li><a class="dropdown-item" href="#" id="logout">Logout</a></li>
+              </ul>
+            </div>
+          </div>
+          <a href="/login" class="btn btn-primary logo-none" role="button">Login</a>
+        </div>
+        
+      </div>
+    </nav>
+  </header>
+
+  <!-- Vertical Menu - Now placed directly under navbar -->
+  <div class="vertical-menu">
+    <ul class="menu-list">
+      <li class="menu-item all-categories">All Categories</li>
+      <li><a class="menu-item" href="/cinema">Cinema Tickets</a></li>
+      <li><a class="menu-item" href="/plane">Plane Tickets</a></li>
+      <li><a class="menu-item" href="/football">Football Tickets</a></li>
+      <li><a class="menu-item" href="/concert">Concert Tickets</a></li>
+      <li><a class="menu-item" href="/bus">Bus Tickets</a></li>
+      <li><a class="menu-item menu-item-last" href="/train">Train Tickets</a></li>
+    </ul>
+  </div>
+
+  <section>
+    <div id="section-Categories" class="section-Categories"></div>
+
+    <div class="menu-carousel-container">
+      <!-- Carousel -->
+      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="2000">
+            <img src="/images/1920x1080_DESPLACAMENT-SHAKTAR-DONETSK_CAT.png" class="HotOffersImg w-100" alt="...">
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="/images/Tickets-1.jpg" class="HotOffersImg w-100" alt="...">
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="/images/image.png" class="HotOffersImg w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <!-- About Section -->
+      <div class="footer-section about">
+        <h3>About Us</h3>
+        <p>We offer a variety of entertainment and travel options, including concerts, cinema, sports, and more. Your gateway to unforgettable experiences!</p>
+      </div>
+      
+      <!-- Quick Links Section -->
+      <div class="footer-section links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="/" style="color: #00aaff;">Home</a></li>
+          <li><a href="/profile">Profile</a></li>
+          <li><a href="/PurchasedTickets">Purchased Tickets</a></li>
+          <li><a href="/concert">Concert</a></li>
+          <li><a href="/cinema">Cinema</a></li>
+          <li><a href="/bus">Bus</a></li>
+          <li><a href="/football">Football</a></li>
+          <li><a href="/plane">Plane</a></li>
+          <li><a href="/train">Train</a></li>
+          <li><a href="/contactUs">Contact Us</a></li>
+        </ul>
+      </div>
+      
+      <!-- Social Media Section -->
+      <div class="footer-section social">
+        <h3>Follow Us</h3>
+        <div class="social-links">
+          <a href="https://www.facebook.com/omar.atwa.37051?mibextid=ZbWKwL" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.tiktok.com/@2xdanger2" class="social-icon" target="_blank"><i class="fab fa-tiktok"></i></a>
+          <a href="https://www.instagram.com/omar_atwa03/profilecard/?igsh=a3g0c2Vodm1oMTd3" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/andrew-wageh-4a8688245" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Footer Bottom Section -->
+    <div class="footer-bottom">
+      <p>&copy; 2024 Tickety. All Rights Reserved. Designed by Team Tickety.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

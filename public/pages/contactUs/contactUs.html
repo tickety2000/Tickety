@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="pages/contactUs/contactUs.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/all.css">
+    </head>
+    <body>
+
+        <header class="head1">
+            <div class="line2">
+                <div>
+                    <p class="Time">SUN-THU 10 AM to 6 PM</p>
+                    <a href="/contactUs" class="contactUs">Contact Us</a>
+                </div>
+            </div>
+        
+            <nav class="nav">
+                <div class="navCountent">
+                    <div class="nav-left">
+                        <a href="/"> <img src="/images/Weblogo.png" class="logo" alt="logo"> </a>
+                    </div>
+        
+                    <div class="nav-center">
+                        <div class="search-container">
+                            <input 
+                                id="search-bar" 
+                                class="search-input" 
+                                type="text" 
+                                placeholder="Search tickets by name, description, or location..." 
+                                aria-label="Search tickets"
+                            />
+                            <div id="search-results" class="search-results"></div>
+                        </div>
+                    </div>
+        
+                    <div class="nav-right">
+                        <button class="cart-btn">
+                            <img src="\images\BoughtTickets.png" alt="Cart Icon" class="cart-img" id="PurchasedTickets">
+                        </button>
+                        <div id="username-display" class="username-display">
+                            <img id="user-img" src="https://i.ibb.co/Phmq0Lk/none-user.png" alt="user">
+                            <p id="user-name"></p>
+                        </div>
+                        <div class="dropdown-user" id="user-dropdown"></div>
+                        <a href="/login" class="btn btn-primary logo-none ButtonLogin" role="button"><samp class="spaam">Login</samp></a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <div class="header2">
+                <h2>Contact Us</h2>
+            </div>
+            <br>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Your Message:</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Enter your message" required></textarea>
+                </div>
+                <button id="contact-submit" type="submit">Send</button>
+            </form>
+            <div id="responseMessage" class="hidden"></div>
+        </main>
+
+        <br><br>
+
+        <footer class="footer">
+            <div class="footer-container">
+                <!-- About Section -->
+                <div class="footer-section about">
+                    <h3>About Us</h3>
+                    <p>We offer a variety of entertainment and travel options, including concerts, cinema, sports, and more. Your gateway to unforgettable experiences!</p>
+                </div>
+                
+                <!-- Quick Links Section -->
+                <div class="footer-section links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/profile">Profile</a></li>
+                        <li><a href="/PurchasedTickets">Purchased Tickets</a></li>
+                        <li><a href="/concert">Concert</a></li>
+                        <li><a href="/cinema">Cinema</a></li>
+                        <li><a href="/bus">Bus</a></li>
+                        <li><a href="/football">Football</a></li>
+                        <li><a href="/plane">Plane</a></li>
+                        <li><a href="/train">Train</a></li>
+                        <li><a href="/contactUs" style="color: #00aaff;">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Social Media Section -->
+                <div class="footer-section social">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Footer Bottom Section -->
+            <div class="footer-bottom">
+                <p>&copy; 2024 Tickety. All Rights Reserved. Designed by Tickety.</p>
+            </div>
+        </footer>
+
+        <script src="pages/contactUs/contactUs.js"></script>
+        <script src="js/script.js"></script>
+    </body>
+</html>

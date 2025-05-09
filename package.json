@@ -1,0 +1,32 @@
+{
+  "name": "tickety",
+  "version": "10.0.0",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js"
+  },
+  "keywords": [
+    "ticketing",
+    "ticket",
+    "tickety",
+    "express",
+    "nodejs"
+  ],
+  "author": "Teckety",
+  "license": "ISC",
+  "description": "A ticketing system project using Express and MongoDB",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "fund": "^1.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.10.0",
+    "mongoose": "^8.7.2",
+    "nodemailer": "^6.9.16",
+    "path": "^0.12.7",
+    "validator": "^13.12.0"
+  }
+}

@@ -16,9 +16,6 @@ const TicketPlane = require('../models/ticketPlane');     // Plane ticket model
 const TicketTrain = require('../models/ticketTrain');     // Train ticket model
 const TicketFootball = require('../models/ticketFootball'); // Football ticket model
 
-
-
-
 // Middleware for JWT authentication
 function authenticateToken(req, res, next) {
     const authHeader = req.headers['authorization'];
